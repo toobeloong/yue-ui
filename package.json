@@ -1,8 +1,14 @@
 {
   "name": "yue-ui",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A component built with vue.js",
-  "main": "src/main.js",
+  "files": [
+    "dist/vue.js",
+    "dist/yue-ui.js",
+    "dist/yue.ui.min.js",
+    "src"
+  ],
+  "main": "dist/yue-ui.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --progress --config scripts/webpack.dev.js",
@@ -45,5 +51,8 @@
     "vue-loader": "^8.5.2",
     "vue-style-loader": "^1.0.0",
     "webpack": "^1.13.1"
+  },
+  "dependencies": {
+    "vue": "^1.0.24"
   }
 }

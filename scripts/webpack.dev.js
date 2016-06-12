@@ -4,14 +4,14 @@ var path = require('path');
 module.exports = {
 
   entry: {
-    app: path.resolve(__dirname, '../src/main.js'),
-    vendor: ["vue"]
+    app: path.resolve(__dirname, '../src/main.js')
   },
 
   output: {
     path: path.resolve(__dirname, '../dist'),
     publicPath: "/public/",
-    filename: "yue-ui.js"
+    filename: "yue-ui.js",
+    libraryTarget: "commonjs"
   },
 
   module: {
@@ -29,9 +29,6 @@ module.exports = {
     ]
   },
 
-  plugins: [
-    new webpack.optimize.CommonsChunkPlugin("vendor", "vue.js")
-  ],
-
-  devtool: "#inline-source-map"
+  plugins: [],
+  devtool: "#source-map"
 };
